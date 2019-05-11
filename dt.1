@@ -1,0 +1,30 @@
+.Dd 2019-05-11
+.Dt DT 1
+.Sh NAME
+.Nm dt
+.Nd Run program detached from terminal
+.Sh SYNOPSIS
+.Nm
+.Ar cmd Op Ar arg ...
+.Sh DESCRIPTION
+Launch programs immune to hangups. Standard input and output is redirected to
+.Ar /dev/null.
+Programs launched by
+.Nm
+do not appear as active jobs in shell. All enviroment variables are inherited.
+
+.Sh OPTIONS
+None.
+
+.Sh EXAMPLES
+Most common use-case is to open terminal applications in new terminal window
+without blocking current terminal.
+
+$
+.Nm
+xterm -e mutt
+
+.Sh SEE ALSO
+\&\fInohup\fR\|(1)
+
+
